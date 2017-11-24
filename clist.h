@@ -16,14 +16,6 @@ struct CDoubleLinkedStruct
     {
 
     }
-
-    CDoubleLinkedStruct(const CDoubleLinkedStruct& cdlBaseStruct)
-    :m_iData(cdlBaseStruct.m_iData)
-    ,m_pNextNode(NULL)
-    ,m_pPrevNode(NULL)
-    {
-
-    }
 };
 
 class CList
