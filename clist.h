@@ -41,7 +41,7 @@ public:
 
     friend CList& operator+(CList& clList, const CList& clBaseList);
 
-protected:
+private:
     CDoubleLinkedStruct* m_pStartNode;
     CDoubleLinkedStruct* m_pEndNode;
 
