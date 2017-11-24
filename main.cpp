@@ -28,6 +28,11 @@ int main()
 
     cNextList[2] = 777;
 
+    cNextList.EraseByIndex(1);
+
+    cNextList.ShowAllElements();
+
+    cNextList = cSomeList;
     cNextList.ShowAllElements();
 
     return 0;

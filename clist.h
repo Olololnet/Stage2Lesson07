@@ -30,22 +30,24 @@ class CList
 {
 public:
     CList();
-    explicit CList(const CList& clBaseList);
+    CList(const CList& clBaseList);
     ~CList();
     void push_back(const int& iData);
     void ShowAllElements();
     void EraseLastElement();
+    void EraseStruct(CDoubleLinkedStruct* pCurStruct);
     void EraseByIndex(const int& iElementNum);
 
-    const int& at(const int& iElementNum) const;
-    int& at(const int &iElementNum);
+    const int& at(const size_t& uElementNum) const;
+    int& at(const size_t& uElementNum);
 
     CList& operator=(const CList& clBaseList);
-    CList& operator+(const CList& clBaseList);
     CList& operator+=(const CList& clBaseList);
 
-    int& operator[](const int& iIndex);
-    const int& operator[](const int& iIndex) const;
+    int& operator[](const size_t& iIndex);
+    const int& operator[](const size_t& iIndex) const;
+
+    friend CList& operator+(CList& clList, const CList& clBaseList);
 
 protected:
     CDoubleLinkedStruct* m_pStartNode;
